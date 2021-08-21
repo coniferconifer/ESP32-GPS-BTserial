@@ -11,7 +11,7 @@ This program requires Android phone has the Bluetooth Serial Port Profile to con
 
 ## Application 
 
-![system](https://github.com/coniferconifer/ESP32-GPS-BTserial/block.drawio.png)
+![system](https://github.com/coniferconifer/ESP32-GPS-BTserial/blob/main/block.drawio.png)
 
 Use your external GPS module as Android's internal GPS.
 
