@@ -11,6 +11,8 @@ This program requires Android phone has the Bluetooth Serial Port Profile to con
 
 ## Application 
 
+![system](https://github.com/coniferconifer/ESP32-GPS-BTserial/block.drawio.png)
+
 Use your external GPS module as Android's internal GPS.
 
 Step1. Configure mock-location on Android.
