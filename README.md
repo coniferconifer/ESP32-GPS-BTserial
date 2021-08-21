@@ -11,11 +11,14 @@ This program requires Android phone has the Bluetooth Serial Port Profile to con
 
 ## Application 
 
-Configure mock-location on Android.
+Use your external GPS module as Android's internal GPS.
+
+Step1. Configure mock-location on Android.
 
 Ref. https://eos-gnss.com/knowledge-base/configuring-mock-location-on-android-with-your-arrow-gnss-receiver
 
-Run Lefebure on Android to replace from Android phone's embeded GPS to your GPS.
+Step2. Run Lefebure NTRIP Client on Android to replace from Android phone's embeded GPS to your GPS.
+No need to set up NTRIP server if your GPS module does not support RTK GPS.
  
 Ref. https://play.google.com/store/apps/details?id=com.lefebure.ntripclient&hl=ja&gl=US
 
