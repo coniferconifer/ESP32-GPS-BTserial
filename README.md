@@ -24,6 +24,7 @@ Ref. https://play.google.com/store/apps/details?id=com.lefebure.ntripclient&hl=j
 https://shop.m5stack.com/products/mini-gps-bds-unit
 
 GPS TX should be connected to GPIO_NUM_16 of ESP32
+
 GPS used to test : M5stack GPS module (using AT6558) , connected by 9600bps serial.
 
 
@@ -31,13 +32,16 @@ Tested with https://shop.m5stack.com/products/mini-gps-bds-unit and Android 11 p
 
 ## Libraries 
 TinyGPS+
+
 Ref. http://arduiniana.org/libraries/tinygpsplus/
 
 Bluetooth Serial Port Profile at ESP32
 
- Ref. https://github.com/espressif/arduino-esp32/blob/master/libraries/BluetoothSerial/
+Ref. https://github.com/espressif/arduino-esp32/blob/master/libraries/BluetoothSerial/
       
 ## License
+
 Copyright 2021(C) coniferconifer
+
 MIT License
  
