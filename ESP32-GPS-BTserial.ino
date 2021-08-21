@@ -38,7 +38,6 @@ Ticker  ticker;
 bool bReadyTicker = false;
 const int iIntervalTime = 3;  // watch dog interval in sec
 long lastGPSread=0;
-#define WAIT_UNTIL_REBOOT_MS 1000
 //  timer kick
 void kickRoutine() {
   bReadyTicker = true;
@@ -47,7 +46,6 @@ void kickRoutine() {
     Serial.println();
     Serial.println();
     Serial.printf("Serial BT hang? rebooting now %d \r\n",lastGPSread);
-    delay(WAIT_UNTIL_REBOOT_MS);
     ESP.restart();
   }
 
