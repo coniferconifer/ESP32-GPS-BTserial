@@ -26,7 +26,7 @@
 #include <Ticker.h>      // timer 
 
 #include <TinyGPS++.h>
-#define VERSION "20210821"
+#define VERSION "20210823"
 TinyGPSPlus gps;
 #define GPS_BAUD 9600
 HardwareSerial ss(2); // GPIO_NUM_16 for RX ( wired to GPS TX), GPIO_NUM_17 for TX (not used now)
@@ -52,7 +52,7 @@ void kickRoutine() {
 }
 void setup() {
   Serial.begin(115200);
-  delay(1000);
+  while (!Serial) continue;
   Serial.print("ESP32-GPS-BTserial.ino ");Serial.println(VERSION);
   Serial.println("setup Android terminal to pair with GPS-BT-server");
   SerialBT.begin("GPS-BT-server");
