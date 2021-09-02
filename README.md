@@ -51,4 +51,4 @@ Copyright 2021(C) coniferconifer
 MIT License
 
 ## dual GPS BT serial 
-https://github.com/coniferconifer/ESP32-GPS-BTserial
+https://github.com/coniferconifer/ESP32-dual-GPS-BTserial
