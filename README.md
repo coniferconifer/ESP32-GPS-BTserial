@@ -35,6 +35,10 @@ GPS used to test : M5stack GPS module (using AT6558) , connected by 9600bps seri
 
 Tested with https://shop.m5stack.com/products/mini-gps-bds-unit and Android 11 phone.
 
+Android BT serial terminal: https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal&hl=ja&gl=US
+
+Monitoring tool : "NMEA Monitor for windows" http://4river.a.la9.jp/gps/index.htm
+
 ## Libraries 
 TinyGPS+
 
