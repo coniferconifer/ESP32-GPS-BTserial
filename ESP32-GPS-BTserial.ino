@@ -28,8 +28,9 @@
 Ticker  ticker;
 bool bReadyTicker = false;
 #endif
+
 #include <TinyGPS++.h>
-#define VERSION "20210828"
+#define VERSION "20210904"
 TinyGPSPlus gps;
 #define GPS_BAUD 9600
 HardwareSerial ss(2); // GPIO_NUM_16 for RX ( wired to GPS TX), GPIO_NUM_17 for TX (not used now)
@@ -69,7 +70,27 @@ void kickRoutine() {
   }
 }
 #endif
-
+boolean gpsReady = false;
+// wait until GPS module outputs something before watchdog works
+void waitUntilGPSReady() {
+  char c;
+  long i=0;
+  Serial.printf("waiting for GPS ready \r\n",i);
+  while (1) {
+    if (ss.available() > 0) {
+      c = ss.read(); //
+    //  Serial.write(c); // monitor for GPS application , ex. ublox u-center
+      if (gps.encode(c)) {
+        gpsReady = true;
+        Serial.println("OK");
+        return;
+      }
+    }
+    i++;
+    lastGPSread = millis();
+    if (i%100000==0) Serial.print(".");
+  }
+}
 void setup() {
   Serial.begin(115200);
   delay(1000);
@@ -85,6 +106,8 @@ void setup() {
 #else
   xTaskCreatePinnedToCore( codeForBTserial, "BTserialWatch", 4000, NULL, 1, &Task1, 1); //core 1
 #endif
+
+  waitUntilGPSReady();
 }
 
 void loop() {
